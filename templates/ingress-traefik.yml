@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: index.namdemo
+    http:
+      paths: 
+      - path: /
+        backend:
+          serviceName: index
+          servicePort: 80 
+  - host: cheese.namdemo
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: cheese
+          servicePort: 80
+            

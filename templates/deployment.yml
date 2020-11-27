@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: index
+spec:
+  replicas: {{ .Values.replicas }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: {{  include "rollingUpdate" . | indent 6 }}
+  selector:
+    matchLabels: 
+      app: index
+  template:
+    metadata:
+      labels:
+        app: index
+    spec:
+      containers:
+        - name: my-index
+          image: {{.Values.pod.image}}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cheese
+spec:
+  replicas: {{ .Values.replicas }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: {{  include "rollingUpdate" . | indent 6 }}
+  selector:
+    matchLabels:
+      app: cheese
+  template:
+    metadata:
+      labels:
+        app: cheese
+    spec:
+      containers:
+        - name: stillon
+          image: errm/cheese:stilton
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+
