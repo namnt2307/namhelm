@@ -3,7 +3,7 @@ entries:
   mychart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-11-30T09:44:04.241654165+07:00"
+    created: "2020-11-30T09:51:56.891575581+07:00"
     description: A Helm chart for Kubernetes
     digest: 8ef62f44e26de9a9beae5e095c2b99847d64301425535869b0847d656bd7213c
     name: mychart
@@ -11,4 +11,4 @@ entries:
     urls:
     - https://xizibin.github.io/namhelm/mychart-0.2.0.tgz
     version: 0.2.0
-generated: "2020-11-30T09:44:04.235938778+07:00"
+generated: "2020-11-30T09:51:56.889427206+07:00"
