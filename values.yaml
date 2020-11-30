@@ -1,12 +1,12 @@
 
 
 rollingUpdate:
-  maxSurge: 1
-  maxUnavailable: 1
+  maxSurge: a 
+  maxUnavailable: b
 
 
 
-replicas: 3
+replicas: c
 
 
 pod:
